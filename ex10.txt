@@ -1,0 +1,32 @@
+% Base de conhecimento com fatos sobre ingredientes e receitas
+ingrediente(sal).
+ingrediente(acucar).
+ingrediente(oleo).
+ingrediente(farinha).
+ingrediente(ovos).
+ingrediente(leite).
+ingrediente(fermento).
+ingrediente(chocolate).
+ingrediente(cacau).
+ingrediente(manteiga).
+
+receita(bolo_chocolate, [farinha, ovos, leite, fermento, chocolate, manteiga]).
+receita(bolo_simples, [farinha, ovos, leite, fermento]).
+receita(bolo_cenoura, [farinha, ovos, leite, fermento]).
+receita(bolo_cacau, [farinha, ovos, leite, fermento, cacau, manteiga]).
+receita(bolo_vanilla, [farinha, ovos, leite, fermento]).
+receita(bolo_laranja, [farinha, ovos, leite, fermento]).
+receita(bolo_coco, [farinha, ovos, leite, fermento]).
+receita(bolo_milho, [farinha, ovos, leite, fermento]).
+receita(bolo_banana, [farinha, ovos, leite, fermento]).
+receita(bolo_limao, [farinha, ovos, leite, fermento]).
+
+% Regra para listar receitas que contenham um ingrediente específico
+receita_com_ingrediente(Ingrediente, Receita) :-
+    receita(Receita, Ingredientes),
+    member(Ingrediente, Ingredientes).
+
+Regra pra listar as receitas qiue tenham farinha
+?- receita_com_ingrediente(farinha, Receita).
+
+

@@ -1,0 +1,32 @@
+% Fatos representando músicas e seus gêneros
+musica_genero(song1, pop).
+musica_genero(song2, rock).
+musica_genero(song3, pop).
+musica_genero(song4, hip_hop).
+musica_genero(song5, rock).
+musica_genero(song6, electronic).
+musica_genero(song7, hip_hop).
+musica_genero(song8, electronic).
+musica_genero(song9, pop).
+musica_genero(song10, rock)
+
+Regra para listar todas as músicas de um gênero específico
+musicas_do_genero(Genero, Musicas) :-
+    findall(Musica, musica_genero(Musica, Genero), Musicas).
+
+% Consulta para encontrar todas as músicas de um gênero específico (por exemplo, "pop")
+?- musicas_do_genero(pop, MusicasPop).
+
+musica_genero(smooth_criminal, pop).
+musica_genero(paint_it_black, rock).
+musica_genero(bohemian_rhapsody, rock).
+musica_genero(blackbird, folk).
+musica_genero(billie_jean, pop).
+musica_genero(hotel_california, rock).
+musica_genero(shape_of_you, pop).
+musica_genero(blues_suede_shoes, rockabilly).
+musica_genero(the_sound_of_silence, rock).
+musica_genero(uptown_funk, funk).
+
+
+

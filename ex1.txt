@@ -1,0 +1,17 @@
+
+
+cor_objeto(vermelho, maca).
+cor_objeto(verde, pera).
+cor_objeto(amarelo, banana).
+cor_objeto(azul, caneta).
+cor_objeto(verde, abacate).
+cor_objeto(preto, piano).
+cor_objeto(branco, papel).
+cor_objeto(rosa, flor).
+cor_objeto(vermelho, morango).
+cor_objeto(azul, céu)
+
+cor_associada_a_objeto(Cor, Objeto) :-
+    cor_objeto(Cor, Objeto).
+?- cor_associada_a_objeto(verde, Objeto).
+

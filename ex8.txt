@@ -1,0 +1,21 @@
+% Base de conhecimento com fatos representando distâncias entre cidades
+distancia(cidadeA, cidadeB, 50).
+distancia(cidadeA, cidadeC, 80).
+distancia(cidadeA, cidadeD, 120).
+distancia(cidadeB, cidadeC, 30).
+distancia(cidadeB, cidadeD, 90).
+distancia(cidadeC, cidadeD, 40).
+distancia(cidadeC, cidadeE, 60).
+distancia(cidadeD, cidadeE, 70).
+distancia(cidadeD, cidadeF, 110).
+distancia(cidadeE, cidadeF, 50).
+
+% Regra para encontrar a cidade mais próxima
+cidade_mais_proxima(CidadeOrigem, CidadeMaisProxima) :-
+    distancia(CidadeOrigem, CidadeMaisProxima, MenorDistancia),
+    \+ (distancia(CidadeOrigem, OutraCidade, Distancia),
+        Distancia < MenorDistancia).
+
+% Exemplo de consulta
+% Encontrar a cidade mais próxima à cidadeA
+% ?- cidade_mais_proxima(cidadeA, CidadeMaisProxima).

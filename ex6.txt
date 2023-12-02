@@ -1,0 +1,21 @@
+% Fatos representando os animais e suas espécies
+animal(gato, mamifero).
+animal(cachorro, mamifero).
+animal(passaro, ave).
+animal(galinha, ave).
+animal(sapo, anfibio).
+animal(tartaruga, reptil).
+animal(cobra, reptil).
+animal(baleia, mamifero).
+animal(abelha, inseto).
+animal(abelha_rainha, inseto).
+% Regra para encontrar todos os animais de uma espécie específica
+animais_da_especie(Especie, ListaAnimais) :-
+    findall(Animal, animal(Animal, Especie), ListaAnimais).
+Para encontrar todos os mamímeros
+?- animais_da_especie(mamifero, Animais).
+
+]
+
+
+

@@ -1,0 +1,32 @@
+% Fatos representando produtos, preços e quantidades em estoque
+produto_estoque(teclado, 30, 5). % Produto: teclado, Preço: 30, Quantidade em estoque: 5
+produto_estoque(monitor, 200, 3). % Produto: monitor, Preço: 200, Quantidade em estoque: 3
+produto_estoque(maouse, 15, 0). % Produto: mouse, Preço: 15, Quantidade em estoque: 0
+produto_estoque(celular, 500, 8). % Produto: celular, Preço: 500, Quantidade em estoque: 8
+produto_estoque(fone_de_ouvido, 50, 2). % Produto: fone de ouvido, Preço: 50, Quantidade em estoque: 2
+produto_estoque(notebook, 800, 0). % Produto: notebook, Preço: 800, Quantidade em estoque: 0
+produto_estoque(cadeira, 100, 4). % Produto: cadeira, Preço: 100, Quantidade em estoque: 4
+produto_estoque(mesa, 150, 6). % Produto: mesa, Preço: 150, Quantidade em estoque: 6
+produto_estoque(pendrive, 20, 0). % Produto: pendrive, Preço: 20, Quantidade em estoque: 0
+produto_estoque(tenis, 80, 1). % Produto: tênis, Preço: 80, Quantidade em estoque: 1
+
+Regra para determinar se um produto está em falta (quantidade em estoque igual a 0)
+produto_em_falta(Produto) :-
+    produto_estoque(Produto, _, Quantidade),
+    Quantidade =:= 0.
+
+% Consulta para encontrar produtos em falta
+?- produto_em_falta(ProdutoEmFalta).
+
+produto_estoque(teclado, 30, 5). % Produto: teclado, Preço: 30, Quantidade em estoque: 5
+produto_estoque(monitor, 200, 3). % Produto: monitor, Preço: 200, Quantidade em estoque: 3
+produto_estoque(maouse, 15, 0). % Produto: mouse, Preço: 15, Quantidade em estoque: 0
+produto_estoque(celular, 500, 8). % Produto: celular, Preço: 500, Quantidade em estoque: 8
+produto_estoque(fone_de_ouvido, 50, 2). % Produto: fone de ouvido, Preço: 50, Quantidade em estoque: 2
+produto_estoque(notebook, 800, 0). % Produto: notebook, Preço: 800, Quantidade em estoque: 0
+produto_estoque(cadeira, 100, 4). % Produto: cadeira, Preço: 100, Quantidade em estoque: 4
+produto_estoque(mesa, 150, 6). % Produto: mesa, Preço: 150, Quantidade em estoque: 6
+produto_estoque(pendrive, 20, 0). % Produto: pendrive, Preço: 20, Quantidade em estoque: 0
+produto_estoque(tenis, 80, 1). % Produto: tênis, Preço: 80, Quantidade em estoque: 1
+
+

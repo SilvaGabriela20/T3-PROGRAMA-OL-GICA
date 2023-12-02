@@ -1,0 +1,17 @@
+% Base de conhecimento com fatos
+nota(joao, 7.5).
+nota(maria, 6.0).
+nota(pedro, 4.5).
+nota(ana, 8.0).
+nota(carlos, 3.5).
+nota(fernanda, 5.5).
+nota(ricardo, 9.0).
+nota(julia, 2.0).
+nota(lucas, 6.5).
+nota(isabela, 4.0).
+% Regra para determinar se um aluno foi aprovado (nota maior ou igual a 5)
+aprovado(Aluno) :-
+    nota(Aluno, Nota),
+    Nota >= 5.0.
+]
+
